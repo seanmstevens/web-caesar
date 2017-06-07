@@ -21,7 +21,7 @@ div#form-wrapper {
 
 form {
     margin: auto;
-    background-color: #EEE;
+    background-color: #D5D5D5;
     padding: 20px;
     width: 540px;
     font: 16px sans-serif;
@@ -114,19 +114,36 @@ input[type = "submit"] {
     font-family: "Quicksand", sans-serif;
     font-size: 1em;
     width: 135px;
-    margin: 10px auto 25px;
+    margin: 0 auto 25px;
     padding: 0.5em 0.8em;
     letter-spacing: 0.2em;
     background: transparent;
+    cursor: pointer;
     border: 2px solid black;
     border-radius: 1000px;
     font-weight: bold;
     text-transform: uppercase;
-    transition: background 200ms ease-in;
+    transition: color, background 120ms ease-out;
+}
+
+input[type = "submit"]:focus {
+    outline: none;
 }
 
 input[type = "submit"]:hover {
-    background: #ff5656;
+    background: red;
+    color: #EEE;
+}
+
+p.error {
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    display: block;
+    margin: 20px 50px 0;
+    color: #EEE;
+    background-color: red;
+    border-radius: 3px;
 }
 
 /* ---- MUI CSS ---- */
@@ -170,7 +187,10 @@ input[type = "submit"]:hover {
   border-color: transparent;
 }
 
-.mui-form-control:focus ~ .bar:before,
+.mui-form-control:focus ~ .bar:before {
+  width: 50.3%;
+}
+
 .mui-form-control:focus ~ .bar:after {
   width: 50%;
 }

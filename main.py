@@ -25,10 +25,19 @@ def is_integer(num):
 def encrypt():
     rotation = request.form['rot']
     text = request.form['text']
-
-    rotation = int(rotation)
-    encrypted_message = rotate_string(text, rotation)
     template = jinja_env.get_template('caesar_form.html')
-    return template.render(message = encrypted_message, title = "Web Caesar")
+
+    inputerror = ''
+
+    if not is_integer(rotation):
+        inputerror = "Please enter a valid rotation value (0-99)"
+    else:
+        rotation = int(rotation)
+        encrypted_message = rotate_string(text, rotation)
+
+    if not inputerror:
+        return template.render(message = encrypted_message, inputerror = inputerror, title = "Web Caesar")
+    else:
+        return template.render(message = text, inputerror = inputerror, title = "Web Caesar")
 
 app.run()

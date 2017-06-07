@@ -1,18 +1,35 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-image: url("images/topography.png")
+    background-image: url("images/topography.png");
+}
+
+div#over-wrapper {
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+}
+
+div#form-wrapper {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 form {
+    margin: auto;
     background-color: #EEE;
     padding: 20px;
-    margin: 0 auto;
     width: 540px;
     font: 16px sans-serif;
     border-radius: 10px;
 }
 
 #rot-container {
-    margin: 55px auto auto;
+    margin: 30px auto auto;
     width: 250px;
     height: 250px;
     padding: 0;
@@ -119,12 +136,12 @@ input[type = "submit"]:hover {
   display: block;
 }
 
-#rotation.bar:before,
-#rotation.bar:after {
+#rot-bar.bar:before,
+#rot-bar.bar:after {
   content: '';
   height: 4px;
   width: 0;
-  bottom: -50px;
+  bottom: -2px;
   position: absolute;
   background: black; 
   transition: 0.2s ease all;

@@ -1,51 +1,34 @@
 from flask import Flask, request
 from caesar import rotate_string
+import os
+import jinja2
+
+template_dir = os.path.join(os.path.dirname(__file__), 'templates')
+jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape = True)
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-form = """
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <style>
-            form {{
-                background-color: #EEE;
-                padding: 20px;
-                margin: 0 auto;
-                width: 540px;
-                font: 16px sans-serif;
-                border-radius: 10px;
-            }}
-            textarea {{
-                margin: 10px 0;
-                width: 540px;
-                height: 120px;
-            }}
-        </style>
-    </head>
-    <body>
-        <form method = 'POST'>
-            <label>Rotate by:
-                <input type = "text" name = "rot" value = "0"/>
-            </label>
-            <textarea name = "text">{0}</textarea>
-            <input type = "submit"/>
-    <body>
-</html>
-"""
-
 @app.route('/')
 def index():
-    return form.format("")
+    template = jinja_env.get_template('caesar_form.html')
+    return template.render(title = "Web Caesar")
+
+def is_integer(num):
+    try:
+        int(num)
+        return True
+    except ValueError:
+        return False
 
 @app.route('/', methods = ['POST'])
 def encrypt():
     rotation = request.form['rot']
-    message = request.form['text']
+    text = request.form['text']
+
     rotation = int(rotation)
-    encrypted_message = rotate_string(message, rotation)
-    return form.format(encrypted_message)
+    encrypted_message = rotate_string(text, rotation)
+    template = jinja_env.get_template('caesar_form.html')
+    return template.render(message = encrypted_message, title = "Web Caesar")
 
 app.run()

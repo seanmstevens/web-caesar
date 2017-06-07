@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method = 'POST'>
+    <label class = "title" for = "rotation">Select Your Rotation (0 - 99):</label>
+    <div id = "rot-container">
+        <input id = "rotation" class = "mui-form-control" type = "text" name = "rot" placeholder = "0" maxlength = "2" autocomplete = "off"/>
+        <span class = "bar"></span>
+    </div>
+    <textarea onclick="init();"  name = "text" id = "text" rows = "1" class = "mui-form-control" placeholder = "Type your message here">{{message}}</textarea>
+        <span class = "bar"></span>
+    <input type = "submit" value = "encrypt"/>
+
+{% endblock %}

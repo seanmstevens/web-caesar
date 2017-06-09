@@ -25,6 +25,7 @@ form {
     padding: 20px;
     width: 540px;
     font: 16px sans-serif;
+    border: 1px solid #837f7f;
     border-radius: 10px;
 }
 
@@ -93,7 +94,7 @@ textarea {
     background-color: #DDD;
     border: 1px solid #888;
     border-radius: 4px;
-    transition: background-color 100ms ease-in;
+    transition: background-color 130ms ease-in;
 }
 
 textarea:hover {
@@ -127,7 +128,7 @@ input[type = "submit"] {
     border-radius: 1000px;
     font-weight: bold;
     text-transform: uppercase;
-    transition: color, background 120ms ease-out;
+    transition: color
 }
 
 input[type = "submit"]:focus {
@@ -171,7 +172,7 @@ p#copyright {
   width: 0;
   bottom: -10px;
   position: absolute;
-  background: black; 
+  background: black;
   transition: 0.2s ease all;
 }
 
@@ -182,7 +183,7 @@ p#copyright {
   width: 0;
   bottom: 14px;
   position: absolute;
-  background: black; 
+  background: black;
   transition: 0.2s ease all;
 }
 
@@ -191,7 +192,7 @@ p#copyright {
 }
 
 .bar:after {
-  right: 50%; 
+  right: 50%;
 }
 
 .mui-form-control:focus {

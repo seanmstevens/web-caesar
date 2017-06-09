@@ -7,13 +7,13 @@
         <form method = 'POST'>
             <label class = "title" for = "rotation">Select Your Rotation (0 - 99):</label>
             <div id = "rot-container">
-                <input id = "rotation" class = "mui-form-control" type = "text" name = "rot" 
-                placeholder = "0" maxlength = "2" autocomplete = "off" 
+                <input id = "rotation" class = "mui-form-control" type = "text" name = "rot"
+                placeholder = "0" maxlength = "2" autocomplete = "off"
                 onfocus = 'changeColor("rot-container")' onblur = 'revertColor("rot-container")'/>
                 <span id = "rot-bar" class = "bar"></span>
             </div>
             <p class = "error">{{inputerror}}</p>
-            <textarea onclick="init();" name = "text" id = "text" rows = "1" class = "mui-form-control" 
+            <textarea name = "text" id = "text" rows = "1" class = "mui-form-control"
             placeholder = "Type your message here">{{message}}</textarea>
                 <span class = "bar"></span>
             <input type = "submit" value = "encrypt"/>

@@ -32,10 +32,10 @@ function init () {
 
 // Background Color Change
 
-function changeColor(id) {
-    document.getElementById(id).style.background = '#E9E9E9';
+function changeColor() {
+    document.getElementById('rot-container').style.background = '#F4F4F4';
 }
 
-function revertColor(id) {
-    document.getElementById(id).style.background = '#DDD';
+function revertColor() {
+    document.getElementById('rot-container').style.background = '#DDD';
 }

@@ -21,7 +21,7 @@ div#form-wrapper {
 
 form {
     margin: auto;
-    background-color: #D5D5D5;
+    background-color: #e9e7e7;
     padding: 20px;
     width: 540px;
     font: 16px sans-serif;
@@ -98,7 +98,7 @@ textarea {
 }
 
 textarea:hover {
-    background-color: #E9E9E9;
+    background-color: #F4F4F4;
     border-color: #E8E8E8;
 }
 
@@ -107,7 +107,7 @@ textarea::placeholder {
 }
 
 textarea:focus {
-    background-color: #E9E9E9;
+    background-color: #F4F4F4;
     border-color: #888 !important;
     outline: none;
 }
@@ -128,7 +128,7 @@ input[type = "submit"] {
     border-radius: 1000px;
     font-weight: bold;
     text-transform: uppercase;
-    transition: color
+    transition: color, background 100ms ease-in;
 }
 
 input[type = "submit"]:focus {
@@ -181,7 +181,7 @@ p#copyright {
   content: '';
   height: 2px;
   width: 0;
-  bottom: 14px;
+  bottom: 15px;
   position: absolute;
   background: black;
   transition: 0.2s ease all;
@@ -200,11 +200,11 @@ p#copyright {
 }
 
 .mui-form-control:focus ~ .bar:before {
-  width: 49.5%;
+  width: 50.2%;
 }
 
 .mui-form-control:focus ~ .bar:after {
-  width: 49.5%;
+  width: 49.9%;
 }
 
 #rotation.mui-form-control:focus ~ .bar:before,

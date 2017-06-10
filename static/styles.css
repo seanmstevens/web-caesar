@@ -21,7 +21,7 @@ div#form-wrapper {
 
 form {
     margin: auto;
-    background-color: #e9e7e7;
+    background-color: #d2cfcf;
     padding: 20px;
     width: 540px;
     font: 16px sans-serif;
@@ -112,7 +112,7 @@ textarea:focus {
     outline: none;
 }
 
-input[type = "submit"] {
+input[type="submit"] {
     display: block;
     position: relative;
     top: 25px;
@@ -131,11 +131,11 @@ input[type = "submit"] {
     transition: color, background 100ms ease-in;
 }
 
-input[type = "submit"]:focus {
+input[type="submit"]:focus {
     outline: none;
 }
 
-input[type = "submit"]:hover {
+input[type="submit"]:hover {
     background: red;
     color: #EEE;
 }
@@ -158,56 +158,54 @@ p#copyright {
     font-family: monospace;
 }
 
+
 /* ---- MUI CSS ---- */
 
 .bar {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
-#rot-bar.bar:before,
-#rot-bar.bar:after {
-  content: '';
-  height: 4px;
-  width: 0;
-  bottom: -10px;
-  position: absolute;
-  background: black;
-  transition: 0.2s ease all;
+#rot-bar.bar:before, #rot-bar.bar:after {
+    content: '';
+    height: 4px;
+    width: 0;
+    bottom: -10px;
+    position: absolute;
+    background: black;
+    transition: 0.2s ease all;
 }
 
-.bar:before,
-.bar:after {
-  content: '';
-  height: 2px;
-  width: 0;
-  bottom: 15px;
-  position: absolute;
-  background: black;
-  transition: 0.2s ease all;
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 15px;
+    position: absolute;
+    background: black;
+    transition: 0.2s ease all;
 }
 
 .bar:before {
-  left: 50%;
+    left: 50%;
 }
 
 .bar:after {
-  right: 50%;
+    right: 50%;
 }
 
 .mui-form-control:focus {
-  border-color: transparent;
+    border-color: transparent;
 }
 
-.mui-form-control:focus ~ .bar:before {
-  width: 50.2%;
+.mui-form-control:focus~.bar:before {
+    width: 50.2%;
 }
 
-.mui-form-control:focus ~ .bar:after {
-  width: 49.9%;
+.mui-form-control:focus~.bar:after {
+    width: 49.9%;
 }
 
-#rotation.mui-form-control:focus ~ .bar:before,
-#rotation.mui-form-control:focus ~ .bar:after {
-  width: 33%;
+#rotation.mui-form-control:focus~.bar:before, #rotation.mui-form-control:focus~.bar:after {
+    width: 33%;
 }

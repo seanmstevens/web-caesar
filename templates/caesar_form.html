@@ -1,24 +1,20 @@
-{% extends 'base.html' %}
-
-{% block content %}
-
-<div id = "over-wrapper">
-    <div id = "form-wrapper">
-        <form method = 'POST'>
-            <label class = "title" for = "rotation">Select Your Rotation (0 - 99):</label>
-            <div id = "rot-container">
-                <input id = "rotation" class = "mui-form-control" type = "text" name = "rot"
-                placeholder = "0" maxlength = "2" autocomplete = "off"
-                onfocus = 'changeColor()' onblur = 'revertColor()'/>
-                <span id = "rot-bar" class = "bar"></span>
+{% extends 'base.html' %} {% block content %}
+<div id="over-wrapper">
+    <div id="form-wrapper">
+        <form method='POST'>
+            <label class="title" for="rotation">Select Your Rotation (0 - 99):</label>
+            <div id="rot-container">
+                <input id="rotation" class="mui-form-control" type="text" name="rot" placeholder="0"
+                maxlength="2" autocomplete="off" onfocus='changeColor()' onblur='revertColor()' />
+                <span id="rot-bar" class="bar"></span>
             </div>
-            <p class = "error">{{inputerror}}</p>
-            <textarea name = "text" id = "text" rows = "1" class = "mui-form-control"
-            placeholder = "Type your message here">{{message}}</textarea>
-                <span class = "bar"></span>
-            <input type = "submit" value = "encrypt"/>
+            <p class="error">{{inputerror}}</p>
+            <textarea name="text" id="text" rows="1" class="mui-form-control"
+            placeholder="Type your message here">{{message}}</textarea>
+            <span class="bar"></span>
+            <input type="submit" value="encrypt" />
         </form>
     </div>
-    <p id = "copyright">&copy; Sean Stevens | 2017</p>
+    <p id="copyright">&copy; Sean Stevens | 2017</p>
 </div>
 {% endblock %}

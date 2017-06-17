@@ -181,7 +181,7 @@ p#copyright {
     content: '';
     height: 2px;
     width: 0;
-    bottom: 15px;
+    bottom: 13px;
     position: absolute;
     background: black;
     transition: 0.2s ease all;
